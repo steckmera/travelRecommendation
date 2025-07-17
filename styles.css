@@ -1,0 +1,375 @@
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+  color: #333;
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+
+/* Estilos generales para la barra de navegación */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 24px;
+  background-color: #fff;
+  box-shadow: 0 2px 8px rgb(0 0 0 / 0.1);
+  flex-wrap: wrap;
+  gap: 10px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo img {
+  height: 42px;
+  width: 42px;
+  object-fit: contain;
+}
+
+.logo span {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #2c3e50;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 22px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li a {
+  color: #34495e;
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {
+  color: #2980b9;
+}
+
+/* Contenedor barra de búsqueda y redes sociales */
+.search-social-container {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: nowrap;
+  min-width: 300px;
+}
+
+/* Barra de búsqueda */
+.search-bar {
+  display: flex;
+  gap: 8px;
+  flex-grow: 1;
+}
+
+.search-bar input {
+  flex-grow: 1;
+  padding: 10px 15px;
+  font-size: 1rem;
+  border: 2px solid #bdc3c7;
+  border-radius: 6px;
+  transition: border-color 0.3s ease;
+}
+
+.search-bar input:focus {
+  border-color: #2980b9;
+  outline: none;
+}
+
+.search-bar button {
+  padding: 10px 18px;
+  font-weight: 600;
+  font-size: 1rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  background-color: #2980b9;
+  color: white;
+  box-shadow: 0 2px 6px rgb(41 128 185 / 0.5);
+}
+
+.search-bar button:hover {
+  background-color: #1f6391;
+}
+
+.search-bar button:last-child {
+  background-color: #7f8c8d;
+  box-shadow: none;
+}
+
+.search-bar button:last-child:hover {
+  background-color: #616e70;
+}
+
+/* Íconos de redes sociales */
+.social-icons {
+  display: flex;
+  gap: 15px;
+}
+
+.social-icons a {
+  display: inline-block;
+  transition: transform 0.2s ease;
+}
+
+.social-icons a:hover {
+  transform: scale(1.15);
+}
+
+.social-icons img {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+  filter: grayscale(0.3);
+  transition: filter 0.3s ease;
+}
+
+.social-icons a:hover img {
+  filter: grayscale(0);
+}
+
+/* Hero section */
+.hero {
+  padding: 80px 20px;
+  background: url('fondo-viaje.jpg') center center/cover no-repeat;
+  text-align: center;
+  color: #fff;
+  text-shadow: 2px 2px 6px rgba(0,0,0,0.7);
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  margin-bottom: 16px;
+  font-weight: 700;
+}
+
+.hero-content p {
+  font-size: 1.25rem;
+  max-width: 650px;
+  margin: 0 auto;
+  line-height: 1.5;
+}
+
+/* Resultados container */
+.resultados {
+  padding: 40px 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 24px;
+  background-color: #fefefe;
+}
+
+/* Card para cada resultado */
+.resultado-item {
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgb(0 0 0 / 0.08);
+  max-width: 320px;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.resultado-item:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 18px rgb(0 0 0 / 0.15);
+}
+
+.resultado-item img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-bottom: 1px solid #ecf0f1;
+}
+
+.resultado-info {
+  padding: 18px 20px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.resultado-info h3 {
+  font-size: 1.3rem;
+  margin: 0 0 12px;
+  color: #2980b9;
+  font-weight: 700;
+}
+
+.resultado-info p {
+  flex-grow: 1;
+  font-size: 1rem;
+  color: #555;
+  margin: 0 0 14px;
+  line-height: 1.4;
+}
+
+.resultado-info .hora {
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: #333;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+  }
+
+  .search-social-container {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .search-bar {
+    flex-grow: 1;
+  }
+
+  .resultados {
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .resultado-item {
+    max-width: 100%;
+  }
+
+  .hero-content h1 {
+    font-size: 2.2rem;
+  }
+}
+
+.card {
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgb(0 0 0 / 0.08);
+  max-width: 320px;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 18px rgb(0 0 0 / 0.15);
+}
+
+.card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-bottom: 1px solid #ecf0f1;
+}
+
+.card .resultado-info {
+  padding: 18px 20px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.card .resultado-info h3 {
+  font-size: 1.3rem;
+  margin: 0 0 12px;
+  color: #2980b9;
+  font-weight: 700;
+}
+
+.card .resultado-info p {
+  flex-grow: 1;
+  font-size: 1rem;
+  color: #555;
+  margin: 0 0 14px;
+  line-height: 1.4;
+}
+
+.card .resultado-info .hora {
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: #333;
+}
+
+
+.main-content {
+  padding: 30px 20px;
+  max-width: 500px;
+  margin: 0 auto;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+}
+
+.form-contacto {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  margin-top: 20px;
+}
+
+.form-contacto label {
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.form-contacto input,
+.form-contacto textarea {
+  padding: 10px 14px;
+  border: 2px solid #bdc3c7;
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+  font-family: inherit;
+}
+
+.form-contacto input:focus,
+.form-contacto textarea:focus {
+  border-color: #2980b9;
+  outline: none;
+}
+
+.form-contacto button {
+  padding: 12px 0;
+  background-color: #2980b9;
+  border: none;
+  color: white;
+  font-weight: 700;
+  font-size: 1.1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.form-contacto button:hover {
+  background-color: #1f6391;
+}

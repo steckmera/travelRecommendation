@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ExploraMundo</title>
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="travel_recommendation.js"></script>
+
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="logo">
+        <img src="logo.png" alt="Logo de ExploraMundo">
+        <span>ExploraMundo</span>
+      </div>
+      <ul class="nav-links">
+        <li><a href="travel_recommendation.html">Inicio</a></li>
+        <li><a href="about.html">Acerca de Nosotros</a></li>
+        <li><a href="contact.html">Contáctanos</a></li>
+      </ul>
+      <div class="search-social-container">
+        <div class="search-bar">
+          <input type="text" id="searchInput" placeholder="Buscar destinos...">
+          <button onclick="buscarDestinos()">Buscar</button>
+          <button onclick="restablecerResultados()">Restablecer</button>
+        </div>
+        <div class="social-icons">
+          <a href="#"><img src="facebook.png" alt="Facebook"></a>
+          <a href="#"><img src="instagram.png" alt="Instagram"></a>
+          <a href="#"><img src="twitter.png" alt="Twitter"></a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section id="inicio" class="hero">
+      <div class="hero-content">
+        <h1>Descubre el mundo con ExploraMundo</h1>
+        <p>Explora culturas, paisajes y experiencias inolvidables alrededor del mundo.</p>
+      </div>
+    </section>
+
+    <section id="resultados" class="resultados"></section>
+  </main>
+</body>
+</html>

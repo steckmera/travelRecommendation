@@ -3,6 +3,7 @@
       {
         "id": 1,
         "name": "Australia",
+        "timeZone": "America/Mexico_City",
         "cities": [
           {
             "name": "Sydney, Australia",
@@ -19,6 +20,7 @@
       {
         "id": 2,
         "name": "Japan",
+        "timeZone": "America/Mexico_City",
         "cities": [
           {
             "name": "Tokyo, Japan",
@@ -35,6 +37,7 @@
       {
         "id": 3,
         "name": "Brazil",
+        "timeZone": "America/Mexico_City",
         "cities": [
           {
             "name": "Rio de Janeiro, Brazil",
